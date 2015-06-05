@@ -34,31 +34,6 @@ Template Name: Departments & Services Template
           
           <article class="filter">
 
-            <?php // Get all of the departments
-
-                $args = array(
-                  'post_type' => 'departments'
-                );
-
-                $departments = new WP_Query( $args );
-
-                if( $departments->have_posts() ){
-                  while( $departments->have_posts() ) {
-                    $departments->the_post();
-                    ?>
-
-                      <section class='well'>
-                      <h3><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h3>
-                        <?php the_excerpt(); ?>
-                      </section>
-                      <p class="pull-right"><a href="#" title="Back to the top">back to the top</a></p>
-
-                    <?php
-                  }
-                }
-              ?>
-
-
             <?php // Get all of the services
 
                 $args = array(
@@ -91,9 +66,9 @@ Template Name: Departments & Services Template
          <div id="sidebar" class="col-sm-4" role="complementary">
            
            <section class="well" id="dropdown-buttons">
-            <h4>Our Departments &amp; Services</h4>
-            <p>Locate the dedicated department and service pages through the directory below:</p>
-            <?php get_template_part( 'partials/department', 'button' ); ?> <?php get_template_part( 'partials/service', 'button' ); ?>
+            <h4>Our Services</h4>
+            <p>Locate the dedicated service through the directory below:</p>
+            <?php get_template_part( 'partials/service', 'button' ); ?>
           </section>
                   
           <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>

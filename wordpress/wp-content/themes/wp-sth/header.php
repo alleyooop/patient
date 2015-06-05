@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">Medical Imaging &amp; Medical Physics</a>
+                  <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">Sheffield Teaching Hospitals</a>
                 </div>
 
                 <!-- mobile only nav -->
@@ -66,7 +66,7 @@
 
               <ul class="nav navbar-nav navbar-right hidden-xs">
               <a href="<?php echo home_url( '/' ); ?>">
-                <img class="navbar-logo" alt="logo for the Sheffield Teaching Hospital NHS Foundation Trust" title="Sheffield Teaching Hospitals NHS Foundation Trust" src="<?php echo content_url('/themes/wp-mimp/images/logo-white.png'); ?>">
+                <img class="navbar-logo" alt="logo for the Sheffield Teaching Hospital NHS Foundation Trust" title="Sheffield Teaching Hospitals NHS Foundation Trust" src="<?php echo content_url('/themes/wp-sth/images/logo-white.png'); ?>">
                 </a>
             </ul>
           </div>

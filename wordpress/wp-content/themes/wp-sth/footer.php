@@ -1,7 +1,6 @@
 </div> <!-- end #container -->			
 
-<footer role="contentinfo">
-			
+<footer role="contentinfo" id="footer">
         <section class="main-footer">
           <div class="container">
             <div class="row">

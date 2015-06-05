@@ -3,9 +3,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     
       <div class="row">
-        <header class="section-header">
-          <h1 itemprop="headline"><?php the_title(); ?></h1>
-        </header>
+        
         
         <?php if ( function_exists('yoast_breadcrumb') ) {
         yoast_breadcrumb();
@@ -15,9 +13,14 @@
       
       <div class="row clearfix">
         <div id="main" class="col-sm-8 department-main" role="main">
-          <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+          <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix well'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 				
-            <section class="post_content clearfix well branded-well" itemprop="articleBody">
+            <header class="section-header">
+                <h1 itemprop="headline"><?php the_title(); ?></h1>
+            </header>
+            
+            
+            <section class="post_content clearfix" itemprop="articleBody">
               <?php the_content(); ?>
               <?php wp_link_pages(); ?>
             </section> <!-- end article section -->
@@ -28,7 +31,7 @@
 					
 				  </article> <!-- end article -->
           
-          <?php if(get_field('mimp_service_patient_information')) : ?>
+          <?php if(get_field('sth_service_patient_information')) : ?>
            <section id="patient-information">
               <div class="well">
                   <?php the_field('mimp_service_patient_information'); ?>
@@ -36,10 +39,10 @@
               </section>
             <?php endif; ?>   
           
-          <?php if(get_field('mimp_team')) : ?>
+          <?php if(get_field('sth_service_team')) : ?>
               <section class="team">
                 <div class="well">
-                <?php the_field('mimp_team'); ?>
+                <?php the_field('sth_service_team'); ?>
                 </div>
              </section>
             <?php endif; ?>
